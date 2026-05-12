@@ -111,6 +111,13 @@ class ApiService {
       }),
     );
 
-    return response.statusCode == 200;
+    print(response.statusCode);
+    print(response.body);
+
+    if (response.statusCode == 200 || response.statusCode == 201) {
+      return true;
+    }
+
+    return false;
   }
 }
